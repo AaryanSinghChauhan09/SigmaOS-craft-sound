@@ -1,0 +1,16 @@
+[component]
+name = "SigmaOS-craft-sound"
+tier = 5
+stability = "scaffold"
+language = "rust"
+description = "Audio production integration for SigmaOS — DAW session, track management, effects chain, and low-latency audio"
+upstream = ["https://github.com/Ardour/ardour"]
+
+[contract]
+provides = ["daw-session", "audio-tracks"]
+depends_on = []
+
+[maturity]
+status = "Scaffold"
+test_evidence = "Compiles"
+next_milestone = "Verification test suite"

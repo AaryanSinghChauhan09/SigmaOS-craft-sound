@@ -1,0 +1,9 @@
+[package]
+name = "sigmaos_craft_sound"
+version = "0.1.0"
+edition = "2021"
+description = "Audio production integration for SigmaOS — DAW session, track management, effects chain, and low-latency audio"
+
+[lib]
+name = "sigmaos_craft_sound"
+path = "src/lib.rs"
