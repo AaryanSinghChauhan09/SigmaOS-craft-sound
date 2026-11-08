@@ -2,7 +2,8 @@
 name = "sigmaos_craft_sound"
 version = "0.1.0"
 edition = "2021"
-description = "Audio production integration for SigmaOS — DAW session, track management, effects chain, and low-latency audio"
+license = "MIT"
+description = "SigmaOS craft-sound component inspired by Linux Mint / Omarchy / Arch Linux."
 
 [lib]
 name = "sigmaos_craft_sound"
