@@ -226,3 +226,43 @@ mod tests {
         }
     }
 }
+
+/// Audio track representation for multi-track DAW projects.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct AudioTrack {
+    pub id: String,
+    pub name: String,
+    pub sample_rate: u32,
+    pub channels: u8,
+}
+
+/// DAW Audio Project managing multiple tracks.
+#[derive(Debug, Clone, PartialEq)]
+pub struct AudioProject {
+    pub name: String,
+    pub tracks: Vec<AudioTrack>,
+}
+
+impl AudioProject {
+    /// Create a new named audio project.
+    pub fn new(name: &str) -> Self {
+        Self {
+            name: name.to_string(),
+            tracks: Vec::new(),
+        }
+    }
+
+    /// Add an audio track to the project.
+    pub fn add_track(&mut self, track: AudioTrack) -> Result<(), String> {
+        if track.name.is_empty() {
+            return Err("Track name cannot be empty".to_string());
+        }
+        self.tracks.push(track);
+        Ok(())
+    }
+
+    /// Number of tracks in project.
+    pub fn track_count(&self) -> usize {
+        self.tracks.len()
+    }
+}
