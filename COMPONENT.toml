@@ -1,7 +1,7 @@
 [component]
 name = "SigmaOS-craft-sound"
 tier = 5
-stability = "scaffold"
+stability = "beta"
 language = "rust"
 description = "SigmaOS craft sound component"
 upstream = ["https://github.com/Ardour/ardour"]
@@ -11,6 +11,6 @@ provides = ["daw-session", "audio-tracks"]
 depends_on = []
 
 [maturity]
-status = "Scaffold"
+status = "Implemented"
 test_evidence = "Compiles"
 next_milestone = "Verification test suite"
